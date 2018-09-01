@@ -78,6 +78,7 @@ extension CountryPickerViewController {
             countries[preferredTitle] = countryPickerView.preferredCountries
         }
         
+        tableView.sectionIndexColor = countryPickerView.searchBarBackgroundColor
         tableView.sectionIndexBackgroundColor = .clear
         tableView.sectionIndexTrackingBackgroundColor = .clear
     }
