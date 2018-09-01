@@ -10,7 +10,7 @@ import UIKit
 
 class CountryPickerViewController: UITableViewController {
     
-    fileprivate var searchController: UISearchController?
+    public var searchController: UISearchController?
     fileprivate var searchResults = [Country]()
     fileprivate var isSearchMode = false
     fileprivate var sectionsTitles = [String]()
@@ -105,6 +105,7 @@ extension CountryPickerViewController {
         searchController?.hidesNavigationBarDuringPresentation = searchBarPosition == .tableViewHeader
         searchController?.definesPresentationContext = true
         searchController?.searchBar.delegate = self
+        searchController?.searchBar.barTintColor = countryPickerView.searchBarBackgroundColor
         searchController?.delegate = self
 
         switch searchBarPosition {

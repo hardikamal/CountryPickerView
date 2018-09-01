@@ -137,6 +137,10 @@ extension DemoViewController: CountryPickerViewDataSource {
     func navigationTitle(in countryPickerView: CountryPickerView) -> String? {
         return "Select a Country"
     }
+    
+    func searchBarBackgroundColor(in countryPickerView: CountryPickerView) -> UIColor {
+        return UIColor.red
+    }
         
     func searchBarPosition(in countryPickerView: CountryPickerView) -> SearchBarPosition {
         if countryPickerView.tag == cpvMain.tag {

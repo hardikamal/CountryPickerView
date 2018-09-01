@@ -43,6 +43,8 @@ public protocol CountryPickerViewDataSource: class {
     /// Return `nil` to use a default "Close" button.
     func closeButtonNavigationItem(in countryPickerView: CountryPickerView) -> UIBarButtonItem?
     
+    func searchBarBackgroundColor(in countryPickerView: CountryPickerView) -> UIColor
+    
     /// The desired position for the search bar.
     func searchBarPosition(in countryPickerView: CountryPickerView) -> SearchBarPosition
     
@@ -76,6 +78,10 @@ public extension CountryPickerViewDataSource {
     
     func searchBarPosition(in countryPickerView: CountryPickerView) -> SearchBarPosition {
         return .tableViewHeader
+    }
+    
+    func searchBarBackgroundColor(in countryPickerView: CountryPickerView) -> UIColor{
+        return UIColor.black
     }
     
     func showPhoneCodeInList(in countryPickerView: CountryPickerView) -> Bool {

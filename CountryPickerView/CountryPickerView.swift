@@ -222,6 +222,7 @@ extension CountryPickerView {
 // MARK:- An internal implementation of the CountryPickerViewDataSource.
 // Returns default options where necessary if the data source is not set.
 extension CountryPickerView: CountryPickerViewDataSource {
+    
     var preferredCountries: [Country] {
         return dataSource?.preferredCountries(in: self) ?? preferredCountries(in: self)
     }
@@ -243,6 +244,10 @@ extension CountryPickerView: CountryPickerViewDataSource {
             return UIBarButtonItem(title: "Close", style: .done, target: nil, action: nil)
         }
         return button
+    }
+    
+    var searchBarBackgroundColor: UIColor {
+        return dataSource?.searchBarBackgroundColor(in: self) ?? searchBarBackgroundColor(in: self)
     }
     
     var searchBarPosition: SearchBarPosition {
